@@ -1,5 +1,4 @@
 name: Codacy Analysis CLI
-
 on:
   push:
     branches:
@@ -13,12 +12,8 @@ jobs:
     name: Codacy Analysis CLI
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@main
 
-      - name: Codacy Analysis
-        uses: codacy/codacy-analysis-cli-action@v1
-        with:
-          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-          files: '**/*.js'
-
+      - name: Run Codacy Analysis CLI
+        uses: codacy/codacy-analysis-cli-action@master
