@@ -1,5 +1,4 @@
 name: Codacy Analysis CLI
-
 on:
   push:
     branches:
