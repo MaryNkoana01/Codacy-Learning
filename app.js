@@ -1,8 +1,9 @@
-
-var l = new URLSearchParams(window.location.search);
-
-var name = urlParams.get('name');
- 
-var unsafe_div = window.document.getElementById("vulnerable-div");
-
-unsafe_div.innerHTML = "Hello " + name;
+function login(username, password) {
+  if (username === "admin" && password === "password123") {
+    localStorage.setItem("isLoggedIn", "true");
+    alert("Login successful!");
+    window.location.href = "dashboard.html";
+  } else {
+    alert("Invalid username or password.");
+  }
+}
