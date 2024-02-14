@@ -1,4 +1,4 @@
-[10:42] Lehlogonolo Mawasha [ MTN Group - South Africa ]
+
 var l = new URLSearchParams(window.location.search);
 
 var name = urlParams.get('name');
